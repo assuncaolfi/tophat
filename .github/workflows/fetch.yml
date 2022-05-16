@@ -2,7 +2,8 @@ name: fetch
 on:
   push:
     paths:
-      - "!*.json"
+      - "fetch"
+      - ".github/workflows/fetch"
   schedule:
     - cron: "00 00 * * *"
 jobs:
