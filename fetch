@@ -1,6 +1,5 @@
 #!/bin/sh
 
-apt-get update && apt-get install -y jq
 url="https://api.cartola.globo.com/"
 status=$(curl "${url}mercado/status")
 season=$(echo $status | jq '.temporada')

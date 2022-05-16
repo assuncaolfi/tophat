@@ -9,14 +9,17 @@ jobs:
     steps:
     - name: Checkout Git
       uses: actions/checkout@v3
+    - name: Install JQ
+      run: sudo apt-get install -y jq
     - name: Fetch Data
       run: source fetch
     - name: Push Changes
+      continue-on-error: true
       run: |-
         git config user.name github-actions
         git config user.email github-actions@github.com
         git add .
-        git commit -m "add data"
+        git commit -m "update data"
         git pull
         git push
 
