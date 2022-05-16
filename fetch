@@ -1,0 +1,17 @@
+#!/bin/sh
+
+apt-get update && apt-get install -y jq
+url="https://api.cartola.globo.com/"
+status=$(curl "${url}mercado/status")
+season=$(echo $status | jq '.temporada')
+round=$(echo $status | jq '.rodada_atual')
+printf -v round "%02d" $round
+
+endpoints=("atletas/mercado" "mercado/status" "partidas")
+for endpoint in ${endpoints[*]}; do
+    file="$season/$round/$endpoint.json"
+    mkdir -p $(dirname $file)
+    touch $file
+    echo "Fetching $url$endpoint"
+    curl $url$endpoint > $file
+done
