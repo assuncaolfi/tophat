@@ -2,6 +2,8 @@
 
 url="https://api.cartola.globo.com/"
 status=$(curl "${url}mercado/status")
+gameover=$(echo $status | jq '.game_over')
+if [ $gameover == "true" ]; then exit 0; fi
 season=$(echo $status | jq '.temporada')
 round=$(echo $status | jq '.rodada_atual')
 printf -v round "%02d" $round
