@@ -26,4 +26,3 @@ jobs:
         git commit -m "update data"
         git pull
         git push
-
