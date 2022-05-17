@@ -4,7 +4,7 @@
 
 Database fetched from the Cartola API.  
 The `fetch` shell script runs hourly starting from season 2022 round 7.  
-Files are named like `$season/$round/$endpoint`.  
+Files are named like `$season/$round/$endpoint.json`.  
 
 Tracked endpoints:
 
