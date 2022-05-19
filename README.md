@@ -7,7 +7,7 @@ Files are named like `$season/$round/$endpoint.json`.
 
 Tracked endpoints:
 
-* `atletas/mercado`.  
-* `esquemas`. 
-* `mercado/status`.   
+* `atletas/mercado`
+* `esquemas`
+* `mercado/status`
 * `partidas`
