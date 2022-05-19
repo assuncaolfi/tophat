@@ -10,3 +10,4 @@ Tracked endpoints:
 * `atletas/mercado`  
 * `mercado/status`  
 * `partidas`
+* `esquemas`
