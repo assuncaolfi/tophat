@@ -1,4 +1,4 @@
-# 🎩 Tophat
+# 🎩 tophat
 
 [![fetch](https://github.com/assuncaolfi/tophat/actions/workflows/fetch.yml/badge.svg)](https://github.com/assuncaolfi/tophat/actions/workflows/fetch.yml)
 
