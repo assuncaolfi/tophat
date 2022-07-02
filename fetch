@@ -8,7 +8,7 @@ season=$(echo $status | jq '.temporada')
 round=$(echo $status | jq '.rodada_atual')
 printf -v round "%02d" $round
 
-endpoints=("atletas/mercado" "esquemas" "mercado/status" "partidas")
+endpoints=("atletas/mercado" "esquemas" "mercado/selecao" "mercado/status" "partidas")
 for endpoint in ${endpoints[*]}; do
     file="$season/$round/$endpoint.json"
     mkdir -p $(dirname $file)
